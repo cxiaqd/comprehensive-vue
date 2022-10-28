@@ -1,7 +1,7 @@
 <template>
   <div id="one-vue">
     <div class="bgImg"></div>
-    <!-- <img src="@/assets/imgs/imgTwo.jpg" alt="" /> -->
+    <!-- <img src="@/assets/imgs/sandyBeach.jpg" alt="" /> -->
     <!-- <div class="box"></div> -->
   </div>
 </template>
@@ -29,7 +29,7 @@ export default {
 .bgImg {
   height: 100%;
   width: 100%;
-  background: url("@/assets/imgs/imgTwo.jpg");
+  background: url("@/assets/imgs/sandyBeach.jpg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
