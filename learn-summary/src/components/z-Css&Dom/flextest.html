@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="box">
+        <div class="num">第1个盒子</div>
+        <div class="num2">第2个盒子</div>
+        <div class="num">第3个盒子</div>
+        <div class="num4">第4个盒子</div>
+        <!-- <div class="num">第5个盒子</div>
+        <div class="num">第6个盒子</div>
+        <div class="num">第7个盒子</div>
+        <div class="num">第8个盒子</div>
+        <div class="num">第9个盒子</div>
+        <div class="num">第10个盒子</div> -->
+    </div>
+</body>
+
+</html>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body,
+    html {
+        height: 100%;
+        background-color: aliceblue;
+    }
+
+    .box {
+        height: 100%;
+        display: flex;
+        /* flex-wrap: wrap; */
+        justify-content: space-around;
+    }
+
+    .num,
+    .num4,
+    .num2 {
+        background-color: bisque;
+        width: 15%;
+        height: 30px;
+        text-align: center;
+        border: 1px solid black;
+        padding: 10px;
+    }
+
+    .num2 {
+        order: 100;
+    }
+</style>
