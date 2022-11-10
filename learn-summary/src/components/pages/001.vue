@@ -1,17 +1,23 @@
 <template>
   <div id="one-vue">
+    <nav-guard></nav-guard>
+
     <div class="bgImg"></div>
     <!-- <img src="@/assets/imgs/sandyBeach.jpg" alt="" /> -->
     <!-- <div class="box"></div> -->
   </div>
 </template>
 <script>
+import NavGuard from "@/components/commons/jumpNav";
+
 export default {
   name: "one-vue",
   data() {
     return {};
   },
-  components: {},
+  components: {
+    NavGuard,
+  },
   methods: {},
   mounted() {},
   computed: {},
