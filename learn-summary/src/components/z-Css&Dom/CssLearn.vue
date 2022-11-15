@@ -78,6 +78,9 @@
     <div class="nine-box">
       小图标垂直居中 <img src="@/assets/imgs/播放.png" alt="" />
     </div>
+    <div class="ten-box">
+      <img src="@/assets/imgs/woman.jpg" alt="" />
+    </div>
   </div>
 </template>
 <script>
@@ -335,5 +338,10 @@ export default {
   }
 }
 .ten-box {
+  border: 1px solid red;
+  img {
+    height: 96px;
+    margin-top: -500px;
+  }
 }
 </style>
