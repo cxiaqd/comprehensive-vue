@@ -6,6 +6,7 @@ import TextLevelCenter from '@/components/z-Css&Dom/文字水平垂直'
 import DivLevelCenter from '@/components/z-Css&Dom/div水平垂直'
 import VueWatch from '@/components/testVue/01-watch'
 import VueAttrs from '@/components/testVue/02-透传'
+import VueSlot from '@/components/testVue/03-slotFather'
 
 Vue.use(VueRouter)
 
@@ -49,6 +50,11 @@ const routes = [
     path: '/attrs',
     name: 'attrs',
     component: VueAttrs
+  },
+  {
+    path: '/slot',
+    name: 'slot',
+    component: VueSlot
   },
 ]
 

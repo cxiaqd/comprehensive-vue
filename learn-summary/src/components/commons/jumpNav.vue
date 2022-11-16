@@ -21,6 +21,7 @@ export default {
       selectBox: [
         { key: "属性watch", path: "/watch" },
         { key: "attrs&inheritAttrs", path: "/attrs" },
+        { key: "slot", path: "/slot" },
         { key: "多行文本垂直居中", path: "/text" },
         { key: "div水平垂直", path: "/div" },
         { key: "CSS", path: "/css" },
