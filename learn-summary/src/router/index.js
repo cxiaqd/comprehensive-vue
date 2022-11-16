@@ -4,6 +4,8 @@ import TestOne from '@/components/pages/001'
 import CssTest from '@/components/z-Css&Dom/CssLearn'
 import TextLevelCenter from '@/components/z-Css&Dom/文字水平垂直'
 import DivLevelCenter from '@/components/z-Css&Dom/div水平垂直'
+import VueWatch from '@/components/testVue/01-watch'
+import VueAttrs from '@/components/testVue/02-透传'
 
 Vue.use(VueRouter)
 
@@ -37,6 +39,16 @@ const routes = [
     path: '/div',
     name: 'div',
     component: DivLevelCenter
+  },
+  {
+    path: '/watch',
+    name: 'watch',
+    component: VueWatch
+  },
+  {
+    path: '/attrs',
+    name: 'attrs',
+    component: VueAttrs
   },
 ]
 

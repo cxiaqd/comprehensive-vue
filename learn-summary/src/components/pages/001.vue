@@ -2,8 +2,8 @@
   <div id="one-vue">
     <nav-guard></nav-guard>
 
-    <div class="bgImg"></div>
-    <!-- <img src="@/assets/imgs/sandyBeach.jpg" alt="" /> -->
+    <!-- <div class="bgImg"></div> -->
+    <img src="@/assets/imgs/lifeCycle.png" alt="" />
     <!-- <div class="box"></div> -->
   </div>
 </template>
@@ -35,7 +35,7 @@ export default {
 .bgImg {
   height: 100%;
   width: 100%;
-  background: url("@/assets/imgs/sandyBeach.jpg");
+  background: url("@/assets/imgs/lifeCycle.png");
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
