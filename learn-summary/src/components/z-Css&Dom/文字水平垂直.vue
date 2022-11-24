@@ -1,6 +1,5 @@
 <template>
   <div id="level-vertical">
-    <nav-guard></nav-guard>
     <!-- 多行文本垂直居中 -->
     <div class="box-content">
       <!-- 第一种方法：父line-height+子行内块+子line-height自定义设置 -->
@@ -36,16 +35,12 @@
   </div>
 </template>
 <script>
-import NavGuard from "@/components/commons/jumpNav";
-
 export default {
   name: "vue",
   data() {
     return {};
   },
-  components: {
-    NavGuard,
-  },
+  components: {},
   methods: {},
 };
 </script>

@@ -1,14 +1,11 @@
 <template>
   <div id="only">
-    <nav-guard></nav-guard>
     <div class="father">
       <attrs-father :v1="value1" :v2="value2" :v3="value3"></attrs-father>
     </div>
   </div>
 </template>
 <script>
-import NavGuard from "@/components/commons/jumpNav";
-
 import attrsFather from "@/components/testVue/02-attrs";
 export default {
   name: "vue",
@@ -21,7 +18,6 @@ export default {
   },
   components: {
     attrsFather,
-    NavGuard,
   },
   methods: {},
   mounted() {

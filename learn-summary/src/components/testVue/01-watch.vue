@@ -1,6 +1,5 @@
 <template>
   <div id="watch-test">
-    <nav-guard></nav-guard>
     <div class="watch-box">
       <p>
         Ask for a question
@@ -27,8 +26,6 @@
   </div>
 </template>
 <script>
-import NavGuard from "@/components/commons/jumpNav";
-
 export default {
   name: "watchTest",
   watch: {
@@ -74,9 +71,7 @@ export default {
       },
     };
   },
-  components: {
-    NavGuard,
-  },
+  components: {},
   methods: {
     getAnswer(newval, oldval) {
       console.log(newval, oldval);

@@ -7,6 +7,9 @@ import DivLevelCenter from '@/components/z-Css&Dom/div水平垂直'
 import VueWatch from '@/components/testVue/01-watch'
 import VueAttrs from '@/components/testVue/02-透传'
 import VueSlot from '@/components/testVue/03-slotFather'
+import IsComponent from '@/components/testVue/isComponent'
+import elTest from '@/components/element/elAutocomplete'
+import elDataPicker from '@/components/element/elDataPicker'
 
 Vue.use(VueRouter)
 
@@ -55,6 +58,21 @@ const routes = [
     path: '/slot',
     name: 'slot',
     component: VueSlot
+  },
+  {
+    path: '/isComponent',
+    name: 'isComponent',
+    component: IsComponent
+  },
+  {
+    path: '/el',
+    name: 'el',
+    component: elTest
+  },
+  {
+    path: '/elDataPicker',
+    name: 'elDataPicker',
+    component: elDataPicker
   },
 ]
 

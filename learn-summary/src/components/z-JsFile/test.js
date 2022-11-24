@@ -74,4 +74,26 @@ function Person() {
     }, 1000);
 }
 
-Person()
+// Person()
+
+
+let a = 6;
+let b = 9;
+function simpleTag(strings, aValExpression, bValExpression,
+    sumExpression) {
+    console.log(strings);
+    console.log(aValExpression);
+    console.log(bValExpression);
+    console.log(sumExpression);
+    return 'foobar';
+}
+let untaggedResult = `${a} + ${b} = ${a + b}`;
+// let taggedResult = simpleTag`${a} + ${b} = ${a + b}`;
+
+// console.log(untaggedResult);
+// console.log(taggedResult);
+
+
+let someDate = new Date(Date.parse("May 25, 2019"))
+console.log(someDate);
+

@@ -84,16 +84,12 @@
   </div>
 </template>
 <script>
-import NavGuard from "@/components/commons/jumpNav";
-
 export default {
   name: "CssLearn",
   data() {
     return {};
   },
-  components: {
-    NavGuard,
-  },
+  components: {},
   methods: {},
   mounted() {},
 };

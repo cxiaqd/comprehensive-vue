@@ -1,6 +1,5 @@
 <template>
   <div id="div-level-vertical">
-    <nav-guard></nav-guard>
     <!-- 绝对定位方法：不确定当前div的宽度和高度，采用 transform: translate(-50%,-50%); 
         当前div的父级添加相对定位（position: relative;） -->
     <div class="box-one">
@@ -23,16 +22,12 @@
   </div>
 </template>
 <script>
-import NavGuard from "@/components/commons/jumpNav";
-
 export default {
   name: "vue",
   data() {
     return {};
   },
-  components: {
-    NavGuard,
-  },
+  components: {},
   methods: {},
   mounted() {},
 };

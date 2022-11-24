@@ -1,6 +1,6 @@
 <template>
   <div id="slot-father">
-    <nav-guard></nav-guard>
+    <!-- 参考文章链接:https://zhuanlan.zhihu.com/p/114502325 -->
     <div class="slot-box">
       <!-- 我们知道，如果直接想要在父组件中的<ebutton></ebutton> 中添加内容，是不会在页面上渲染的。-->
       <!-- <slot-child>123132</slot-child> -->
@@ -40,7 +40,6 @@
 </template>
 <script>
 import slotChild from "@/components/testVue/03-slotChild";
-import NavGuard from "@/components/commons/jumpNav";
 
 export default {
   name: "vue",
@@ -51,7 +50,6 @@ export default {
   },
   components: {
     slotChild,
-    NavGuard,
   },
   methods: {},
   mounted() {},
