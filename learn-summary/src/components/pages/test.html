@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    let count = 500 //全局作用域
+    function foo1() {
+        let count = 0;//函数全局作用域
+        function foo2() {
+            count++;//函数内部作用域
+            console.log(count);
+            return count;
+        }
+        return foo2;//返回函数
+    }
+    let result = foo1();
+    result();//结果为1
+    result();//结果为2
+
+    var name = 'Mike'; //第一次定义name
+    function showName() {
+        console.log(name);  //输出 Mike 还是 Jay ？
+        console.log(count);
+    }
+
+    function changeName() {
+        var name = 'Jay'; //重新定义name
+        showName(); //调用showName()
+    }
+    changeName();
+
+</script>
+
+</html>

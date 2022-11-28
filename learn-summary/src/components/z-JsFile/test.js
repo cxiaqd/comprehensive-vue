@@ -95,5 +95,67 @@ let untaggedResult = `${a} + ${b} = ${a + b}`;
 
 
 let someDate = new Date(Date.parse("May 25, 2019"))
-console.log(someDate);
+// console.log(someDate);
+
+let multiply = (a, b) => a * b
+console.log(multiply(2, 4));
+
+function sum(num1, num2) {
+    return num1 + num2;
+}
+// console.log(sum(5, 6));
+
+function doAdd(num1, num2) {
+    arguments[1] = 10;
+    console.log(arguments.callee);
+    console.log(arguments[0] + num2);
+}
+// doAdd(5, 8)
+
+
+function factorial(num) {
+    if (num <= 1) {
+        return 1;
+    } else {
+        // return num * factorial(num - 1);
+        return num * arguments.callee(num - 1);
+    }
+}
+
+// console.log(factorial(5));
+let trueFactorial = factorial;
+
+// factorial被重新定义，覆盖了之前的定义
+factorial = function () {
+    return 0;
+};
+
+// console.log(trueFactorial(5));
+
+function sum(num1, num2) {
+    return num1 + num2;
+}
+function callSum1(num1, num2) {
+    // return sum.apply(this, arguments); // 传入arguments对象
+    return sum(arguments); // 传入arguments对象
+}
+function callSum2(num1, num2) {
+    // return sum.apply(this, [num1, num2]); // 传入数组
+    return sum([num1, num2]); // 传入数组
+}
+// console.log(callSum1(10, 10)); // 20
+// console.log(callSum2(10, 10)); // 20
+
+
+function fn() {
+    var a = 3;
+    return function () {
+        return ++a;
+    }
+}
+console.log(fn()());
+console.log(fn()());
+let afn = fn();
+console.log(afn());
+console.log(afn());
 
