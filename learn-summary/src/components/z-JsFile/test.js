@@ -153,9 +153,161 @@ function fn() {
         return ++a;
     }
 }
-console.log(fn()());
-console.log(fn()());
+// console.log(fn()());
+// console.log(fn()());
 let afn = fn();
-console.log(afn());
-console.log(afn());
+// console.log(afn());
+// console.log(afn());
+
+// function foo() {
+//     function bar(a) {
+//         var i = 3;
+//         console.log(a + i);
+//     };
+//     for (var i = 0; i < 10; i++) {
+//         bar(i * 2)
+//     }
+// }
+// foo()
+
+
+// function foo() {
+//     console.log(afoo); // 3（不是 2 ！ ）
+// }
+// function bar() {
+//     var afoo = 3;
+//     foo();
+// }
+// var afoo = 2;
+// bar();
+
+// var count = 10;
+// var obj = {
+//     count: 0,
+//     cool: function coolFn() {
+//         var self = this;
+//         console.log("awesome?", this.count);
+//         // setTimeout(function timer() {
+//         //     self.count++;
+//         //     console.log("awesome?", self.count);
+//         // }, 100);
+
+//     }
+// };
+// obj.cool();
+// setTimeout(obj.cool(), 100);
+
+// var obj = {
+//     id: "awesome",
+//     count: 0,
+//     cool: function coolFn() {
+//         setTimeout(() => {
+//             this.count++;
+//             console.log(this.id, this.count);
+//         }, 100);
+//     }
+// };
+// var id = "not awesome"
+// obj.cool(); // 酷
+// setTimeout(obj.cool, 100)
+// var count = 5;
+// console.log(this.count);
+// function foo(num) {
+//     let count = 0;
+//     console.log(`foo:${num}`);
+//     console.log(this.count);
+//     this.count++;
+// }
+// for (let i = 0; i < 10; i++) {
+//     if (i > 5) {
+//         foo(i)
+//     }
+// }
+
+
+// let arrSort = [
+//     {
+//         name: "杭州",
+//         flag: false,
+//         num: 1
+//     },
+//     {
+//         name: "南京",
+//         flag: true,
+//         num: 2
+//     },
+//     {
+//         name: "上海",
+//         flag: true,
+//         num: 3
+//     },
+//     {
+//         name: "宁波",
+//         flag: true,
+//         num: 4
+//     },
+//     {
+//         name: "滨江",
+//         flag: true,
+//         num: 5
+//     },
+//     {
+//         name: "上海",
+//         flag: false,
+//         num: 6
+//     },
+//     {
+//         name: "杭州",
+//         flag: false,
+//         num: 1
+//     },
+// ]
+// arrSort.forEach((ele,index) =>{
+//     if(ele === item){
+//       selectList.splice(index,1);
+//       selectList.unshift(item);
+//       return;
+//     }
+//   });
+// let selectlist = arrSort.filter((item) => {
+//     if (item.flag) {
+//         selectlist
+//     }
+// })
+// arrSort.sort((item) => {
+//     return item.flag ? -1 : 1
+// })
+// console.log(arrSort);
+
+const CompanyTabWord = {
+    xm: "姓名",
+    zjhm: "身份证号",
+    zjlx: "证件类型",
+    lxdh: "联系电话",
+    zjzp: "证件照片URL",
+    xjzdxz: "现居住地详址",
+    dwbh: "从业单位编号",
+    dwmc: "从业单位名称",
+    dwlb: "企业类别",
+    rylb: "人员类别",
+    zw: "职位名称",
+    bz: "备注",
+    cjsj: '创建时间',
+    gxsj: '更新时间',
+    yxbz: '有效备注',
+    ssdwbh: '所属单位编号',
+};
+let values = Object.values(CompanyTabWord);
+let keys = Object.keys(CompanyTabWord)
+// console.log(values);
+// console.log(keys);
+
+let rest = []
+for (let i = 0; i < values.length; i++) {
+    rest.push({
+        key: keys[i],
+        value: values[i]
+    })
+}
+console.log(rest);
 
