@@ -27,6 +27,7 @@ export default {
         { key: "div水平垂直", path: "/div" },
         { key: "CSS", path: "/css" },
         { key: "element", path: "/el" },
+        { key: "grailLayout", path: "/grailLayout" },
       ],
     };
   },

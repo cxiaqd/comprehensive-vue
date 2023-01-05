@@ -10,6 +10,7 @@ import VueSlot from '@/components/testVue/03-slotFather'
 import IsComponent from '@/components/testVue/isComponent'
 import elTest from '@/components/element/elAutocomplete'
 import elDataPicker from '@/components/element/elDataPicker'
+import GrailLayout from '@/components/commons/grailLayout'
 
 Vue.use(VueRouter)
 
@@ -73,6 +74,11 @@ const routes = [
     path: '/elDataPicker',
     name: 'elDataPicker',
     component: elDataPicker
+  },
+  {
+    path: '/grailLayout',
+    name: 'grailLayout',
+    component: GrailLayout
   },
 ]
 

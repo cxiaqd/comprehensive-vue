@@ -104,6 +104,12 @@
    methods: {
      handleSelectionChange(select) {
        this.deleteIds = select;
+       v-if="
+                (scope.row.approveStatus === 0 ||
+                  scope.row.approveStatus === 3) &&
+                !isSTUser
+              "
+              :selectable="isDisabled"
      },
      detailClick(scope) {
        this.detailData = scope.row;

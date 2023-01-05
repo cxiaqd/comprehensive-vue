@@ -279,35 +279,37 @@ let afn = fn();
 // })
 // console.log(arrSort);
 
-const CompanyTabWord = {
-    xm: "姓名",
-    zjhm: "身份证号",
-    zjlx: "证件类型",
-    lxdh: "联系电话",
-    zjzp: "证件照片URL",
-    xjzdxz: "现居住地详址",
-    dwbh: "从业单位编号",
-    dwmc: "从业单位名称",
-    dwlb: "企业类别",
-    rylb: "人员类别",
-    zw: "职位名称",
-    bz: "备注",
-    cjsj: '创建时间',
-    gxsj: '更新时间',
-    yxbz: '有效备注',
-    ssdwbh: '所属单位编号',
-};
-let values = Object.values(CompanyTabWord);
-let keys = Object.keys(CompanyTabWord)
-// console.log(values);
-// console.log(keys);
+// const CompanyTabWord = {
+//     xm: "姓名",
+//     zjhm: "身份证号",
+//     zjlx: "证件类型",
+//     lxdh: "联系电话",
+//     zjzp: "证件照片URL",
+//     xjzdxz: "现居住地详址",
+//     dwbh: "从业单位编号",
+//     dwmc: "从业单位名称",
+//     dwlb: "企业类别",
+//     rylb: "人员类别",
+//     zw: "职位名称",
+//     bz: "备注",
+//     cjsj: '创建时间',
+//     gxsj: '更新时间',
+//     yxbz: '有效备注',
+//     ssdwbh: '所属单位编号',
+// };
+// let values = Object.values(CompanyTabWord);
+// let keys = Object.keys(CompanyTabWord)
+// // console.log(values);
+// // console.log(keys);
 
-let rest = []
-for (let i = 0; i < values.length; i++) {
-    rest.push({
-        key: keys[i],
-        value: values[i]
-    })
-}
-console.log(rest);
+// let rest = []
+// for (let i = 0; i < values.length; i++) {
+//     rest.push({
+//         key: keys[i],
+//         value: values[i]
+//     })
+// }
+// console.log(rest);
+
+
 

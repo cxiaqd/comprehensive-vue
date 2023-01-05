@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    function foo1() {
+        console.log(this.count1);
+    }
+    var count1 = 10;
+    // foo1()
+
+    function foo2() {
+        console.log(this.count2);
+    }
+    var obj2 = {
+        count2: 10,
+        foo2: foo2
+    }
+    var bar2 = obj2.foo2
+    var count2 = "hello,world"
+    // bar2()  //hello,world
+    // obj2.foo2() //10
+
+
+    function foo3() {
+        console.log(this.a3);
+    }
+    var obj3 = {
+        a3: 2
+    };
+    foo3.call(obj3)
+
+    // var bar3 = function () {
+    //     foo3.call(obj3)
+    // }
+    // bar3();
+    setTimeout(foo3.call(obj3), 100)
+</script>
+
+</html>
