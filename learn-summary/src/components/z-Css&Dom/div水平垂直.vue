@@ -75,10 +75,6 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-
-  -webkit-display: flex;
-  -webkit-align-items: center;
-  -webkit-justify-content: center;
   border: 5px solid seagreen;
   div {
     width: 200px;

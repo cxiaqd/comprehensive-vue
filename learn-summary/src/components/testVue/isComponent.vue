@@ -1,7 +1,7 @@
 <template>
   <div id="is-component">
     <div class="center">
-      <h1>{{ comName }}</h1>
+      <h1>comName:{{ comName }}</h1>
       <button @click="comName = 'Left'">Left</button>
       <button @click="comName = 'Right'">Right</button>
     </div>
