@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>过滤器函数</title>
+    <link rel="icon" href="../../assets/html.ico" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="htmlApp">
+        <p>{{num | filterB}}</p>
+    </div>
+</body>
+<script>
+    new Vue({
+        el: '#htmlApp',
+        data: function () {
+            return {
+                num: 10
+            }
+        },
+        filters: {
+            filterA: function (num, val) {
+                return num + val - 10;
+            },
+            filterB: function (val) {
+                return val - 20;
+            },
+            filterC: function (val) {
+                return val - 30;
+            },
+        },
+        methods: {}
+    })
+</script>
+
+</html>

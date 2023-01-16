@@ -13,6 +13,14 @@ import elDataPicker from '@/components/element/elDataPicker'
 import elDialog from '@/components/element/elDialog'
 import elContainer from '@/components/element/elContainer'
 import GrailLayout from '@/components/commons/grailLayout'
+import A from '@/components/keepAlive/A'
+import B from '@/components/keepAlive/B'
+import C from '@/components/keepAlive/C'
+import mixinTest from '@/components/testVue/mixin'
+import syncChild from '@/components/testVue/sync.child'
+import syncFather from '@/components/testVue/sync.father'
+import syncTest from '@/components/testVue/syncTest'
+import filters from '@/components/testVue/filters'
 
 Vue.use(VueRouter)
 
@@ -91,6 +99,55 @@ const routes = [
     path: '/grailLayout',
     name: 'grailLayout',
     component: GrailLayout
+  },
+  {
+    path: '/a',
+    name: 'a',
+    component: A,
+    meta: {
+      keepAlive: true // 需要被缓存
+    }
+  },
+  {
+    path: '/b',
+    name: 'b',
+    component: B,
+    meta: {
+      keepAlive: false // 需要被缓存
+    }
+  },
+  {
+    path: '/c',
+    name: 'c',
+    component: C,
+    meta: {
+      keepAlive: false // 需要被缓存
+    }
+  },
+  {
+    path: '/mixinTest',
+    name: 'mixinTest',
+    component: mixinTest,
+  },
+  {
+    path: '/syncChild',
+    name: 'syncChild',
+    component: syncChild,
+  },
+  {
+    path: '/syncFather',
+    name: 'syncFather',
+    component: syncFather,
+  },
+  {
+    path: '/syncTest',
+    name: 'syncTest',
+    component: syncTest,
+  },
+  {
+    path: '/filters',
+    name: 'filters',
+    component: filters,
   },
 ]
 

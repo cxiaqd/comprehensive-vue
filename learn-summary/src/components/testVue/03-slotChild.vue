@@ -17,22 +17,33 @@
       <slot name="childVal" :val1="childVal"
         >访问子组件数据的插槽的默认内容</slot
       >
+
+      <slot name="propSlot" :firstname="name" :age="age" :sex="sex"></slot>
     </div>
   </div>
 </template>
 <script>
+import {mapState} from 'vuex'
 export default {
   name: "vue",
   data() {
     return {
       child: "子组件中的数据",
       childVal: "通过插槽访问的子组件中的数据",
+      name:"大海",
+      age:20,
+      sex:"男"
     };
   },
   components: {},
   methods: {},
-  mounted() {},
-  computed: {},
+  mounted() {
+    console.log(this.name);
+    console.log(this.list);
+  },
+  computed: {
+    ...mapState(['name','list'])
+  },
   watch: {},
 };
 </script>

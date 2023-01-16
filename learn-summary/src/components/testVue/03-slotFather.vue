@@ -2,7 +2,7 @@
   <div id="slot-father">
     <!-- 参考文章链接:https://zhuanlan.zhihu.com/p/114502325 -->
     <div class="slot-box">
-      <!-- 我们知道，如果直接想要在父组件中的<ebutton></ebutton> 中添加内容，是不会在页面上渲染的。-->
+      <!-- 我们知道，如果直接想要在父组件中的<slot-child></slot-child> 中添加内容，是不会在页面上渲染的。-->
       <!-- <slot-child>123132</slot-child> -->
 
       <!-- 那么我们如何使添加的内容能够显示呢？在子组件内添加slot 即可。 -->
@@ -25,6 +25,7 @@
         <template v-slot:three> <p>这是插入到具名插槽three的内容</p> </template>
       </slot-child>
 
+      <!-- 作用域插槽的使用 -->
       <!-- 通过slot 我们可以在父组件为子组件添加内容，通过给slot命名的方式，我们可以添加不止一个位置的内容。但是我们添加的数据都是父组件内的。 -->
       <!-- 我们是否有其他的方法，让我们能够使用子组件的数据呢？ 其实我们也可以使用v-slot的方式： -->
       <slot-child>
@@ -35,6 +36,16 @@
     2-然后在父组件通过v-slot : name = ‘values ’的方式将这个值赋值给 values
     3-最后通过{{ values.key }}的方式获取数据
      -->
+
+      <!-- 解构插槽 -->
+      <slot-child>
+        <template #propSlot="{ firstname, age, sex }">
+          解构插槽：{{ firstname }}-{{ age }}-{{ sex }}
+        </template>
+        <!-- <template #propSlot="slotProps">
+          {{ slotProps }}
+        </template> -->
+      </slot-child>
     </div>
   </div>
 </template>

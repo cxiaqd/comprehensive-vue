@@ -98,7 +98,7 @@ let someDate = new Date(Date.parse("May 25, 2019"))
 // console.log(someDate);
 
 let multiply = (a, b) => a * b
-console.log(multiply(2, 4));
+// console.log(multiply(2, 4));
 
 function sum(num1, num2) {
     return num1 + num2;
@@ -311,5 +311,138 @@ let afn = fn();
 // }
 // console.log(rest);
 
+
+const p1 = new Promise((resolve, reject) => {
+    resolve('hello');
+})
+    .then(result => result)
+    .catch(e => e);
+
+const p2 = new Promise((resolve, reject) => {
+    throw new Error('报错了');
+})
+    .then(result => result)
+    .catch(e => e);
+
+// Promise.all([p1, p2])
+//     .then(result => console.log(result))
+//     .catch(e => console.log(e));
+
+// console.log('1');
+
+// process.nextTick(function () {
+//     console.log('66666');
+// })
+
+// setTimeout(function () {
+//     console.log('2');
+//     process.nextTick(function () {
+//         console.log('3');
+//     })
+//     new Promise(function (resolve) {
+//         console.log('4');
+//         resolve();
+//     }).then(function () {
+//         console.log('5')
+//     })
+// })
+// process.nextTick(function () {
+//     console.log('6');
+// })
+// new Promise(function (resolve) {
+//     console.log('7');
+//     resolve();
+// }).then(function () {
+//     console.log('8')
+// })
+
+// setTimeout(function () {
+//     console.log('9');
+//     process.nextTick(function () {
+//         console.log('10');
+//     })
+//     new Promise(function (resolve) {
+//         console.log('11');
+//         resolve();
+//     }).then(function () {
+//         console.log('12')
+//     })
+// })
+
+// process.nextTick(function () {
+//     console.log('123456');
+// })
+
+/**
+ * 总结一下：
+settimeout，setImme产生的是宏任务，promise的then产生的是微任务，
+process.nexttick是在宏任务结束后微任务开始执行前的回调，
+js执行每次都是先执行一遍当前队列中的所有宏任务，再执行回调，再执行所有微任务，然后再执行下一轮。
+每次找当前宏任务队列的时候，吧settimeout先遮住不看，剩下的，包括new Promise里的都是当前宏任务。
+记住这个，各种promise then process.nexttick 怎么嵌套，都不会晕了。
+by the way ，当前宏任务中如果有多个process.nexttick，那么多个回调函数按顺序依次在宏任务执行结束后执行。
+ */
+
+// 例1
+// Promise.resolve(1)
+//     .then(res => {
+//         console.log(res)
+//         return 2 //包装成 Promise.resolve(2)
+//     })
+//     .catch(err => 3)
+//     .then(res => console.log(res))
+
+// 例2
+// Promise.resolve(1)
+//     .then(x => x + 1)
+//     .then(x => x + 1)
+//     .then(x => x + 1)
+//     .then(x => x + 1)
+//     .then(x => console.log(x)) //2
+
+
+// 例3
+// Promise.resolve(1)
+//     .then(x => x + 1)
+//     .then(x => {
+//         throw new Error('My Error')
+//     })
+//     .catch(err => err)
+//     .then(x => x + 5)
+//     .then(x => console.log(x)) //2
+//     .catch(console.error)
+
+// async function fun() {
+//     let a = await 1;
+//     let b = await new Promise((resolve, reject) => {
+//         setTimeout(function () {
+//             resolve('setTimeout')
+//         }, 3000)
+//     })
+//     let c = await function () {
+//         return 'function'
+//     }()
+//     console.log(a, b, c)
+// }
+// fun(); // 3秒后输出： 1 "setTimeout" "function"
+
+function log(time) {
+    setTimeout(function () {
+        console.log(time);
+        return 1;
+    }, time)
+}
+async function fun() {
+    let a = await log(1000);
+    let b = await log(3000);
+    let c = log(2000);
+    console.log(a);
+    // console.log(1)
+}
+fun();
+// 立即输出 undefined 1
+// 1秒后输出 1000
+// 2秒后输出 2000
+// 3秒后输出 3000
 
 

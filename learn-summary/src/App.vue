@@ -2,7 +2,9 @@
   <div id="app">
     <nav-guard></nav-guard>
     <!-- <vertical-nav></vertical-nav> -->
-    <router-view></router-view>
+    <keep-alive>
+      <router-view></router-view>
+    </keep-alive>
   </div>
 </template>
 <script>

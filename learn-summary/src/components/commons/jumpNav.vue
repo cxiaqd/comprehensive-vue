@@ -28,6 +28,9 @@ export default {
         { key: "CSS", path: "/css" },
         { key: "element", path: "/el" },
         { key: "grailLayout", path: "/grailLayout" },
+        { key: "A", path: "/a" },
+        { key: "B", path: "/b" },
+        { key: "C", path: "/c" },
       ],
     };
   },
